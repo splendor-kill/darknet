@@ -283,9 +283,9 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
 #ifdef GPU
             if (ngpus != 1) sync_nets(nets, ngpus, 0);
 #endif
-            char buff[256];
-            sprintf(buff, "%s/%s_%d.weights", backup_directory, base, i);
-            save_weights(net, buff);
+            //char buff[256];
+            //sprintf(buff, "%s/%s_%d.weights", backup_directory, base, i);
+            //save_weights(net, buff);
         }
 
         if (i >= (iter_save_last + 100)) {
